@@ -1,0 +1,125 @@
+\usepackage{amsmath}\usepackage[toc,section=section,acronym,nonumberlist,nogroupskip]{glossaries}
+\usepackage{xspace}
+\usepackage{xcolor}
+
+\newacronym{rsm}{RSM}{response surface methodology}
+    \newcommand{\Rsm}{\Gls{rsm}\xspace}
+    \newcommand{\rsm}{\gls{rsm}\xspace}
+
+\newcommand{\fig}[1]{Figure~\ref{#1}\xspace}
+\newcommand{\tab}[1]{Table~\ref{#1}\xspace}
+\newcommand{\sfig}[1]{Supplementary Figure~\ref{#1}\xspace}
+\newcommand{\stab}[1]{Supplementary Table~\ref{#1}\xspace}
+
+%%===========%%
+%% Uni Wien colours %%
+%%===========%%
+
+\definecolor{ublue}{RGB}{0,99,166}
+\definecolor{ured}{RGB}{167,28,73}
+\definecolor{uorange}{RGB}{221,72,20}
+\definecolor{uyellow}{RGB}{246,168,0}
+\definecolor{ugreen}{RGB}{148,193,84}
+\definecolor{ucyan}{RGB}{17,137,122}
+
+\newcommand*{\dif}[2][t]{\frac{\mathrm{d} #2}{\mathrm{d} #1}}
+\newcommand{\dd}{\delta}
+
+% BIOPROCESS
+\newcommand*{\dil}{\frac{f}{V}}
+\newcommand{\dilfv}[1]{f #1\left/~V\right.}
+\newcommand*{\Gf}{G_{\text{f}}}
+\newcommand{\feed}{f}
+\newcommand{\mufeed}{\mu_{\feed}}
+\newcommand{\tend}{t_{\text{end}}}
+
+\newcommand{\xr}{X_{\text{r}}}
+\newcommand{\ourmodel}{OptFed\xspace}
+\newcommand{\PXend}{\mathcal{Y}_{\hspace{-.3em}\frac{P}{X}}}
+
+% RATES
+\newcommand{\tot}{\circ} % \phantom{\pi}
+\newcommand{\qP}{\pi}
+\newcommand{\qM}{\alpha}
+\newcommand{\qX}{\mu}
+
+\newcommand{\g}{\gamma^{\tot}}
+\newcommand*{\gm}{\gamma^{\qM}}
+\newcommand*{\gmax}{\g_{\text{max}}}
+\newcommand*{\gmmin}{\gm_{\text{min}}}
+\newcommand*{\gmu}{\gamma^{\qX}}
+\newcommand*{\gP}{\gamma^{\pi}}
+\newcommand*{\gPmax}{\gP_{\text{max}}}
+\newcommand*{\qG}{\gamma}
+\newcommand{\mur}{\qX_{\text{r}}}
+
+% SPLINES
+\newcommand{\gspline}{\widehat{\g}}
+\newcommand{\gmuspline}{\widehat{\gmu}}
+\newcommand{\gmspline}{\widehat{\gm}}
+\newcommand{\gPspline}{\widehat{\gP}}
+\newcommand{\Xspline}{\widehat{XV}}
+\newcommand{\Pspline}{\widehat{PV}}
+\newcommand{\Gspline}{\widehat{GV}}
+\newcommand{\Vspline}{\widehat{V}}
+\newcommand{\Gfedspline}{\widehat{G_\text{tot}}}
+
+% TEMPERATURE DEPENDENCE TERM
+\newcommand{\dGcat}{\Delta G_\text{cat}}
+\newcommand{\Teq}{T_\text{eq}}
+\newcommand{\dHeq}{\Delta H_\text{eq}}
+\newcommand{\E}{E_0}
+
+\newcommand{\Eg}{E_0^{\tot}}
+\newcommand{\dGg}{\Delta G_\text{cat}^{\tot}}
+\newcommand{\Teqg}{T_\text{eq}^{\tot}}
+\newcommand{\Heqg}{\Delta H_\text{eq}^{\tot}}
+
+\newcommand{\Egm}{E_0^{\qM}}
+\newcommand{\dGgm}{\Delta G_\text{cat}^{\qM}}
+\newcommand{\Teqgm}{T_\text{eq}^{\qM}}
+\newcommand{\Heqgm}{\Delta H_\text{eq}^{\qM}}
+
+\newcommand{\EgP}{E_0^{\qP}}
+\newcommand{\dGgP}{\Delta G_\text{cat}^{\qP}}
+\newcommand{\TeqgP}{T_\text{eq}^{\qP}}
+\newcommand{\HeqgP}{\Delta H_\text{eq}^{\qP}}
+
+% YIELDS
+\newcommand{\Yxg}{{Y_{\hspace{-.3em}\frac{\xr}{G}}}}
+\newcommand{\Ypg}{{Y_{\hspace{-.3em}\frac{P}{G}}}}
+
+% PARAMETERS
+\newcommand{\K}{K}
+
+\newcommand{\kmg}{\K_{m}^{\tot}}
+\newcommand{\kXg}{\K_{X}^{\tot}}
+\newcommand{\kPg}{\K_{P}^{\tot}}
+\newcommand{\kng}{\K_{n}^{\tot}}
+\newcommand{\kGg}{\K_{G}^{\tot}}
+\newcommand{\kg}{ \K_{i}^{\tot}}
+
+\newcommand{\kgm}{ \K_{i}^{\qM}}
+\newcommand{\kggm}{\K_{g}^{\qM}}
+\newcommand{\kPgm}{\K_{P}^{\qM}}
+\newcommand{\kGgm}{\K_{G}^{\qM}}
+\newcommand{\kXgm}{\K_{X}^{\qM}}
+\newcommand{\kngm}{\K_{n}^{\qM}}
+
+\newcommand{\kmgP}{\K_{m}^{\qP}}
+\newcommand{\kgP}{ \K_{i}^{\qP}}
+\newcommand{\kXgP}{\K_{X}^{\qP}}
+\newcommand{\kPgP}{\K_{P}^{\qP}}
+\newcommand{\kngP}{\K_{n}^{\qP}}
+\newcommand{\kGgP}{\K_{G}^{\qP}}
+
+% MISC
+
+\newcommand{\abserr}{E_\text{abs}}
+\newcommand{\relerr}{E_\text{rel}}
+
+\newcommand{\na}{\multicolumn{1}{c}{-}}
+
+\newcommand{\mathiascomments}[1]{%
+  \textcolor{cyan}{(Mathias: ``#1'')}%
+}
