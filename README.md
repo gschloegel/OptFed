@@ -21,7 +21,7 @@ Results of the validation experiments and comparison to model predictions
 
 
 
-The last 2 files are for the simulated validation. Note that this will not run on a PC in a reasonable time. It took about 1 day on 100 cores in a server environment.
+The next 2 files are for the simulated validation. Note that this will not run on a PC in a reasonable time. It took about 1 day on 100 cores in a server environment.
 
 05_sim_val.py
 
@@ -30,6 +30,13 @@ creates random data and fits the models for it.
 06_sim_val_results.ipynb
 
 calculates and compares optima for the random processes and the models fitted to them.
+
+
+
+07_AIC_fit.ipynb
+
+impliments an alternative model selection method based on the AICc value and investigates the temperature stability of the found optimum.
+
 
 
 The product and biomass yields are calculated with fba_model/calc_yields.ipynb

@@ -9,8 +9,6 @@ import scipy.optimize
 import scipy.integrate
 import logging
 
-from sympy import O
-
 # physical constants
 R = 8.314  # gas constant
 kB = 1.38e-23  # boltzmann constant
@@ -325,7 +323,7 @@ def get_params(df: pd.DataFrame, dependence: list, p=0.2, target="g"):
             ode = OdeG(d, r)
         elif target == "gm":
             ode = OdeGm(d, r)
-        else:  # targer == "gP"
+        else:  # target == "gP"
             ode = OdeGp(d, r)
         return ode
 
@@ -495,9 +493,11 @@ def cross_validate(
     df_CV["X_est"] = sol.y[0]
     df_CV["P_est"] = sol.y[1]
     df_CV["G_est"] = sol.y[2]
+    df_CV["V_est"] = sol.y[3]
     df_CV["X_est_CV"] = sol_CV.y[0]
     df_CV["P_est_CV"] = sol_CV.y[1]
     df_CV["G_est_CV"] = sol_CV.y[2]
+    df_CV["V_est_CV"] = sol_CV.y[3]
 
     sol = scipy.integrate.solve_ivp(
         f,
